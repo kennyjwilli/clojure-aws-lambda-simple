@@ -8,8 +8,9 @@
                         void]]))
 
 (defn my-handler
-  [x]
+  [{:keys [input]}]
   (println "hello lambda")
+  (println "input" (pr-str (slurp input)))
   "abc123")
 
 (defn -handler
